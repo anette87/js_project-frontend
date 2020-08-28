@@ -6,3 +6,11 @@ div.card {
     box-shadow: 10px 10px black;
     padding: 10px;
   }
+
+div.card2 {
+    background-color: lightblue;
+    height: 600px;
+    width: 300px;
+    box-shadow: 10px 10px black;
+    padding: 10px;
+}
