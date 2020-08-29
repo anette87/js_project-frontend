@@ -29,7 +29,7 @@ class Day{
         card.appendChild(addPlans)
         addPlans.addEventListener('click', (event) => {
             let blankPlan = new Plan({day_id: this.id})
-            blankPlan.addInputs(addPlans)
+            blankPlan.displayNewForm(addPlans)
         });
     }
 

@@ -31,4 +31,20 @@ class PlansAdapter{
         return fetch(`${this.baseUrl}/${plan.id}`, configObj)
         .then(resp => resp.json())
     }
+
+    sendPatchRequest(plan){
+        let configObj = {
+                method: "PATCH",
+                headers: {
+                    "Content-Type": "application/json",
+                    "Accept": "application/json"
+                },
+                body: JSON.stringify({day_id: plan.day_id, location: plan.location, description: plan.description})
+            };
+        return fetch(`${this.baseUrl}/${plan.id}`, configObj)
+        .then(resp => resp.json())
+        .then(updatedPlan => {
+            plan.updateDisplay()
+        });
+    }
 }
