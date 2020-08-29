@@ -1,19 +1,19 @@
-function daysList(days){
-    let container = document.getElementById("appCountainer")
-    container.innerHTML = ""
+function daysList(card, day, addPlans, container){
+    // let container = document.getElementById("appCountainer")
+    // container.innerHTML = ""
 
-    for (const day of days){
-        let card = document.createElement("div");
-        card.setAttribute('class','card');
-        card.setAttribute('data-id',`${day.id}`);
-        let hello = document.createElement("h2")
-        hello.innerHTML = `<h2>Day ${day.date}</h2>`
-        card.appendChild(hello);
-        container.appendChild(card);   
-        let addPlans = document.createElement("button")
-        addPlans.textContent = "Add Plans"
-        card.appendChild(addPlans)
-        addPlans.addEventListener('click', (event) => {
+    // for (const day of days){
+    //     let card = document.createElement("div");
+    //     card.setAttribute('class','card');
+    //     card.setAttribute('data-id',`${day.id}`);
+    //     let h2 = document.createElement("h2")
+    //     h2.innerHTML = `<h2>Day ${day.date}</h2>`
+    //     card.appendChild(h2);
+    //     container.appendChild(card);   
+    //     let addPlans = document.createElement("button")
+    //     addPlans.textContent = "Add Plans"
+    //     card.appendChild(addPlans)
+    //     addPlans.addEventListener('click', (event) => {
             let p = document.createElement("p")
             p.innerHTML= `<input type='text' id="location" placeholder="Location"></input><br><input type='textarea' id="description" placeholder="Description"></input>`
             let submit = document.createElement("button")
@@ -40,9 +40,9 @@ function daysList(days){
                 });
             });
                    
-        })
+    
         
-    }
+    
     let createButton = document.createElement("button")
     createButton.innerText = "View Printable Itinarary"
     container.appendChild(createButton)

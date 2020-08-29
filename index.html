@@ -9,8 +9,8 @@
     </head>
     <body>
         <h1>TRIP ITINERARY</h1>
-        <h2>Create Your Trip Here!</h2>
         <div id="appCountainer">
+            <h2>Create Your Trip Here!</h2>
             <form id="trip-form">
                 <label for="trip-client_name">Your Name:</label>
                 <input type="text" name="client_name" id="trip-client_name"><br><br>
@@ -20,7 +20,7 @@
                 <input type="date" name="starting_day" id="trip-starting_day"><br><br>
                 <label for="trip-last_day">To:</label>
                 <input type="date" name="last_day" id="trip-last_day"><br><br>
-                <input type="submit" value="START">
+                <input type="submit" id="startButton" value="START">
             </form>
         </div>
         
@@ -30,9 +30,13 @@
         
         <!-- add extra .js files here-->
         <script src="index.js" ></script>
-        <script src="src/createtrip.js" ></script>
+        <script src="src/plan.js"></script>
+        <script src="src/day.js" ></script>
+        <script src="src/trip.js" ></script>
+        <script src="src/plansAdapter.js" ></script>
+        <script src="src/tripsAdapter.js" ></script>
         <script src="src/dayslist.js" ></script>
-        <script src="src/displayplan.js" ></script>
+        <script src="src/displayplan.js" ></script> 
 
     </body>
 </html>
