@@ -17,8 +17,13 @@ class Trip{
     displayTrip(){
         container.innerHTML = ""
         let greetings = document.createElement("h2")
+        greetings.setAttribute('class','white-text text-center')
         greetings.innerHTML = `Hi ${this.client_name}! Let's create your trip to ${this.location}!`
         container.appendChild(greetings)
+        let row = document.createElement("div")
+        row.setAttribute("id", "days-row")
+        row.setAttribute("class", "row")
+        container.appendChild(row)
 
         this.days.forEach(day => {
             day.displayDays()            

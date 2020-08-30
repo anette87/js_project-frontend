@@ -1,3 +1,46 @@
+.blue-box{
+    background-color: #D3D3D3;
+    padding: 25px;
+}
+.white-background{
+    background-color:  #D3D3D3;
+    border-style: groove;
+    border-color: white;
+    padding: 25px;
+}
+
+.app-background{
+    background-color: rgba(73,73,73,0.5);
+    padding: 20px;
+    opacity: 2;
+}
+
+.plans-background{
+  background-color: rgba(73,73,73,0.5);
+  padding: 20px;
+  border-color: white;
+  border-style: groove;
+
+
+}
+
+.card-background{
+  background-color: rgba(73,73,73,0.8);
+  padding: 20px;
+  border-color: rgba(245, 245, 245, 0.609);
+  border-style: groove;
+}
+
+.black-text{
+  color:black;
+  
+  
+}
+
+.white-text{
+  color: white;
+  text-shadow: 2px 2px 3px black;
+}
 
 div.card {
     background-color: pink;
@@ -7,10 +50,10 @@ div.card {
     padding: 10px;
   }
 
-div.card2 {
-    background-color: lightblue;
-    height: 600px;
-    width: 300px;
-    box-shadow: 10px 10px black;
-    padding: 10px;
+  html, body{
+    background-image: url(pictures/roadtrip.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover
 }
+
+

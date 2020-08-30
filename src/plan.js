@@ -41,9 +41,9 @@ class Plan{
         let form = document.createElement("form")
         form.setAttribute("class", "plan-form")
         form.innerHTML= 
-            `<input type='text' value='${location}' class="plan-location" placeholder="Location"></input><br>
-             <input type='text' value='${description}' class="plan-description" placeholder="Description"></input><br>
-             <input type='submit' value='Submit'>`
+            `<input type='text' value='${location}' class="plan-location form-control" placeholder="Location"></input><br>
+             <input type='text' value='${description}' class="plan-description form-control" placeholder="Description"></input><br>
+             <input type='submit' class="btn btn-success btn-block btn-rounded z-depth-1'" value='Submit' >`
         return form
     }
 
@@ -79,18 +79,32 @@ class Plan{
         let card = this.dayCard();
         let planContainer = document.createElement("div");
         planContainer.setAttribute("data-plan-id", this.id)
-        planContainer.innerHTML = `<p>${this.location}</p><p>${this.description}</p>`
+        planContainer.setAttribute("class","white-text plans-background")
+        planContainer.innerHTML = `<p class="mt-5">Location: ${this.location}</p><p class="mb-5">Description: ${this.description}</p>`
         
+        
+        let buttonRow = document.createElement("div")
+        buttonRow.setAttribute("class","row")
+        
+        let editButtonCol = document.createElement("div")
+        editButtonCol.setAttribute("class", "col-12 col-md-6")
         let editButton = document.createElement("button")
+        editButton.setAttribute('class','btn btn-success btn-block btn-rounded z-depth-1')
         editButton.innerText = "Edit"
-        planContainer.appendChild(editButton)
+        editButtonCol.appendChild(editButton)
         this.listenForEditClick(editButton)
+        buttonRow.appendChild(editButtonCol)
         
+        let deleteButtonCol = document.createElement("div")
+        deleteButtonCol.setAttribute("class", "col-12 col-md-6")
         let deleteButton = document.createElement("button")
+        deleteButton.setAttribute('class','btn btn-success btn-block btn-rounded z-depth-1')
         deleteButton.innerText = "Delete"
-        planContainer.appendChild(deleteButton)
+        deleteButtonCol.appendChild(deleteButton)
         this.listenForDeleteClick(deleteButton)
+        buttonRow.appendChild(deleteButtonCol)
 
+        planContainer.appendChild(buttonRow)
         card.appendChild(planContainer);
     }
 
@@ -99,14 +113,27 @@ class Plan{
         let planContainer = dayCard.querySelector(`[data-plan-id='${this.id}']`);
         planContainer.innerHTML = `<p>${this.location}</p><p>${this.description}</p>`
         
+        let buttonRow = document.createElement("div")
+        buttonRow.setAttribute("class","row")
+
+        let editButtonCol = document.createElement("div")
+        editButtonCol.setAttribute("class", "col-12 col-md-6")
         let editButton = document.createElement("button")
+        editButton.setAttribute('class','btn btn-success btn-block btn-rounded z-depth-1')
         editButton.innerText = "Edit"
-        planContainer.appendChild(editButton)
+        editButtonCol.appendChild(editButton)
+        buttonRow.appendChild(editButtonCol)
         this.listenForEditClick(editButton)
         
+        let deleteButtonCol = document.createElement("div")
+        deleteButtonCol.setAttribute("class", "col-12 col-md-6")
         let deleteButton = document.createElement("button")
+        deleteButton.setAttribute('class','btn btn-success btn-block btn-rounded z-depth-1')
         deleteButton.innerText = "Delete"
-        planContainer.appendChild(deleteButton)
+        deleteButtonCol.appendChild(deleteButton)
+        buttonRow.appendChild(deleteButtonCol)
+
+        planContainer.appendChild(buttonRow)
         this.listenForDeleteClick(deleteButton)
     }
 
@@ -132,6 +159,8 @@ class Plan{
             this.edit()
         })
     }
+
+    
 
     
 

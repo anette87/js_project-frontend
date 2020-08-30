@@ -5,35 +5,46 @@
         <title>Trip Itinerary</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
         <link rel="stylesheet" href="main.css">
     </head>
     <body>
-        <h1>TRIP ITINERARY</h1>
-        <div id="appCountainer">
-            <h2>Create Your Trip Here!</h2>
-            <form id="trip-form">
-                <label for="trip-client_name">Your Name:</label>
-                <input type="text" name="client_name" id="trip-client_name"><br><br>
-                <label for="trip-email">Email:(Optional)</label>
-                <input type="text" name="email" id="trip-email"><br><br>
-                <label for="trip-location">Location:</label>
-                <input type="text" name="location" id="trip-location"><br><br>
-                <label for="trip-starting_day">From:</label>
-                <input type="date" name="starting_day" id="trip-starting_day"><br><br>
-                <label for="trip-last_day">To:</label>
-                <input type="date" name="last_day" id="trip-last_day"><br><br>
-                <input type="submit" id="startButton" value="START">
-            </form>
-            <h2>Find Existing Trip</h2>
-            <form id="find-form">
-                <label for="find-client_name">Your Name:</label>
-                <input type="text" name="find-client_name" id="find-client_name"><br><br>
-                <label for="find-email">Email:</label>
-                <input type="text" name="find-email" id="find-email"><br><br>
-                <input type="submit" id="findButton" value="LOAD">
-            </form>
-
+        <div class="container">
+            <h1 class="white-text mb-5 mt-4 font-weight-bold text-center"><strong>TRIP</strong> <a class="black-text font-weight-bold"><strong>ITINERARY</strong></a></h1>
+            <div id="appCountainer">
+                <div class="row">
+                    <div class="col-12 col-md-6 text-left white-background app-background">
+                        <h2 class="mb-5 mt-4 font-weight-bold text-center white-text">Create Your Trip Here!</h2>
+                        <form id="trip-form">
+                            <input type="text" name="client_name" class="form-control"  id="trip-client_name">
+                            <label for="trip-client_name" class="white-text">Your Name</label>
+                            <input type="text" name="email" class="form-control" id="trip-email">
+                            <label for="trip-email" class="white-text">Email(Optional)</label>
+                            <input type="text" name="location" class="form-control" id="trip-location">
+                            <label for="trip-location" class="white-text">Location</label>
+                            <input type="date" name="starting_day" class="form-control" id="trip-starting_day">
+                            <label for="trip-starting_day" class="white-text">From</label>
+                            <input type="date" name="last_day" class="form-control" id="trip-last_day">
+                            <label for="trip-last_day" class="white-text">To</label>
+                            <input type="submit" class="btn btn-success btn-block btn-rounded z-depth-1" id="startButton" value="START">
+                        </form>
+                    </div>
+                    <div class="col-12 col-md-1"></div> 
+                    <div class="col-12 col-md-5 text-left white-background app-background" style="height: fit-content;">
+                        <h2 class="mb-5 mt-4 font-weight-bold text-center white-text">Find Existing Trip</h2>
+                        <form id="find-form">
+                            <input type="text" name="find-client_name" class="form-control" id="find-client_name">
+                            <label for="find-client_name" class="white-text">Your Name:</label>
+                            <input type="text" name="find-email" class="form-control" id="find-email">
+                            <label for="find-email" class="white-text">Email:</label>
+                            <input type="submit" class="btn btn-success btn-block btn-rounded z-depth-1" id="findButton" value="LOAD">
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
+
+        
         
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
