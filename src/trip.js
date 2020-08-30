@@ -24,13 +24,17 @@ class Trip{
         row.setAttribute("id", "days-row")
         row.setAttribute("class", "row")
         container.appendChild(row)
-
+        let printable = document.createElement("button")
+        printable.setAttribute('class','btn btn-success btn-block btn-rounded z-depth-1 mt-5 mb-5')
+        printable.innerText = "Print Itinerary"
+        container.appendChild(printable)
+        printable.addEventListener("click", (event) => {
+            event.preventDefault();
+            window.print();
+        })
         this.days.forEach(day => {
             day.displayDays()            
         });
-
-
     }
-
 }
 

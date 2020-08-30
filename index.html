@@ -10,22 +10,22 @@
     </head>
     <body>
         <div class="container">
-            <h1 class="white-text mb-5 mt-4 font-weight-bold text-center"><strong>TRIP</strong> <a class="black-text font-weight-bold"><strong>ITINERARY</strong></a></h1>
+            <h1 class="white-text mb-5 mt-4 font-weight-bold text-center"><strong>TRIP <span class="black-text">ITINERARY</span></strong></h1>
             <div id="appCountainer">
                 <div class="row">
                     <div class="col-12 col-md-6 text-left white-background app-background">
                         <h2 class="mb-5 mt-4 font-weight-bold text-center white-text">Create Your Trip Here!</h2>
                         <form id="trip-form">
                             <input type="text" name="client_name" class="form-control"  id="trip-client_name">
-                            <label for="trip-client_name" class="white-text">Your Name</label>
+                            <label for="trip-client_name" class="white-text mb-4">Your Name</label>
                             <input type="text" name="email" class="form-control" id="trip-email">
-                            <label for="trip-email" class="white-text">Email(Optional)</label>
+                            <label for="trip-email" class="white-text mb-4">Email(Optional)</label>
                             <input type="text" name="location" class="form-control" id="trip-location">
-                            <label for="trip-location" class="white-text">Location</label>
+                            <label for="trip-location" class="white-text mb-4">Location</label>
                             <input type="date" name="starting_day" class="form-control" id="trip-starting_day">
-                            <label for="trip-starting_day" class="white-text">From</label>
+                            <label for="trip-starting_day" class="white-text mb-4">From</label>
                             <input type="date" name="last_day" class="form-control" id="trip-last_day">
-                            <label for="trip-last_day" class="white-text">To</label>
+                            <label for="trip-last_day" class="white-text mb-4">To</label>
                             <input type="submit" class="btn btn-success btn-block btn-rounded z-depth-1" id="startButton" value="START">
                         </form>
                     </div>
@@ -33,10 +33,8 @@
                     <div class="col-12 col-md-5 text-left white-background app-background" style="height: fit-content;">
                         <h2 class="mb-5 mt-4 font-weight-bold text-center white-text">Find Existing Trip</h2>
                         <form id="find-form">
-                            <input type="text" name="find-client_name" class="form-control" id="find-client_name">
-                            <label for="find-client_name" class="white-text">Your Name:</label>
                             <input type="text" name="find-email" class="form-control" id="find-email">
-                            <label for="find-email" class="white-text">Email:</label>
+                            <label for="find-email" class="white-text">Email</label>
                             <input type="submit" class="btn btn-success btn-block btn-rounded z-depth-1" id="findButton" value="LOAD">
                         </form>
                     </div>

@@ -63,6 +63,7 @@ class Plan{
     }
 
     delete() {
+        alert("This plan would be deleted")
         let dayCard = this.dayCard();
         let adapter = new PlansAdapter()
         adapter.sendDeleteRequest(this)
@@ -79,7 +80,7 @@ class Plan{
         let card = this.dayCard();
         let planContainer = document.createElement("div");
         planContainer.setAttribute("data-plan-id", this.id)
-        planContainer.setAttribute("class","white-text plans-background")
+        planContainer.setAttribute("class","white-text plans-background mb-5")
         planContainer.innerHTML = `<p class="mt-5">Location: ${this.location}</p><p class="mb-5">Description: ${this.description}</p>`
         
         
