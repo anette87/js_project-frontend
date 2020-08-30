@@ -2,11 +2,11 @@ class Day{
 
     static all = [] //all the days created
 
-    constructor({trip_id, date, id}){
+    constructor({trip_id, date, id, plans}){
         this.trip_id = trip_id
         this.date = date
         this.id = id
-    
+        this.plans = plans.map(plan => new Plan(plan.data.attributes))
         Day.all.push(this)
     }
 
@@ -31,31 +31,12 @@ class Day{
             let blankPlan = new Plan({day_id: this.id})
             blankPlan.displayNewForm(addPlans)
         });
+        this.displayExistingPlans()
     }
 
-
-
-    // plansByDayCards(days){
-    //     let container = document.getElementById("appCountainer")
-    //     container.innerHTML = ""
-
-    //     for (const day of days){
-    //         let card = document.createElement("div");
-    //         card.setAttribute('class','card');
-    //         card.setAttribute('data-id',`${day.id}`);
-    //         let h2 = document.createElement("h2")
-    //         h2.innerHTML = `<h2>Day ${day.date}</h2>`
-    //         card.appendChild(h2);
-    //         container.appendChild(card);   
-    //         let addPlans = document.createElement("button")
-    //         addPlans.textContent = "Add Plans"
-    //         card.appendChild(addPlans)
-
-    //         addPlans.addEventListener('click', (event) => {
-    //             daysList(day)
-    //         });
-    //     }
-        
-    
-    
+    displayExistingPlans() {
+        this.plans.forEach(plan => {
+            plan.display()
+        });
+    }    
 }

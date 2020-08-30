@@ -2,15 +2,14 @@ class Trip{
 
     static all = [] //all the trips created
 
-    constructor({client_name, location, starting_day, last_day, id, days}){
+    constructor({client_name, email, location, starting_day, last_day, id, days}){
         this.client_name = client_name
+        this.email = email 
         this.location = location
         this.starting_day = starting_day
         this.last_day = last_day
         this.id = id
-        this.days = days.map( day => new Day(day));
-
-
+        this.days = days.map( day => new Day(day.data.attributes));
 
         Trip.all.push(this)
     }

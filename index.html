@@ -14,6 +14,8 @@
             <form id="trip-form">
                 <label for="trip-client_name">Your Name:</label>
                 <input type="text" name="client_name" id="trip-client_name"><br><br>
+                <label for="trip-email">Email:(Optional)</label>
+                <input type="text" name="email" id="trip-email"><br><br>
                 <label for="trip-location">Location:</label>
                 <input type="text" name="location" id="trip-location"><br><br>
                 <label for="trip-starting_day">From:</label>
@@ -22,6 +24,15 @@
                 <input type="date" name="last_day" id="trip-last_day"><br><br>
                 <input type="submit" id="startButton" value="START">
             </form>
+            <h2>Find Existing Trip</h2>
+            <form id="find-form">
+                <label for="find-client_name">Your Name:</label>
+                <input type="text" name="find-client_name" id="find-client_name"><br><br>
+                <label for="find-email">Email:</label>
+                <input type="text" name="find-email" id="find-email"><br><br>
+                <input type="submit" id="findButton" value="LOAD">
+            </form>
+
         </div>
         
         <!--[if lt IE 7]>
