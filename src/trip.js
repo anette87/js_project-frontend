@@ -29,7 +29,6 @@ class Trip{
         printable.innerText = "Print Itinerary"
         container.appendChild(printable)
         printable.addEventListener("click", (event) => {
-            event.preventDefault();
             window.print();
         })
         this.days.forEach(day => {

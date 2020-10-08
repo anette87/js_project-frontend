@@ -28,6 +28,17 @@ class Day{
         let addPlans = document.createElement("button")
         addPlans.setAttribute("class", "new-plan btn btn-success btn-block btn-rounded z-depth-1 mb-5 mt-5")
         addPlans.textContent = "Add Plans"
+        
+        this.plans.forEach(plan => {
+            if (plan.location == 'Arecibo'){
+                let findByLocation = document.createElement("button")
+                findByLocation.textContent = "Just Arecibo"
+                findByLocation.addEventListener('click', (event) => {
+                    this.displayArecibo();
+                })
+                card.appendChild(findByLocation)
+            }
+        })
         card.appendChild(addPlans)
         addPlans.addEventListener('click', (event) => {
             let blankPlan = new Plan({day_id: this.id})
@@ -40,5 +51,16 @@ class Day{
         this.plans.forEach(plan => {
             plan.display()
         });
-    }    
+    }
+    
+    displayArecibo(){
+        let areciboPlans = this.plans.filter(plan => plan.location === "Arecibo")
+        this.plans.forEach(plan => {
+            document.querySelector(`[data-plan-id='${plan.id}']`).remove();
+        })        
+        areciboPlans.forEach(plan => {
+            plan.display()
+        })
+        
+    }
 }
