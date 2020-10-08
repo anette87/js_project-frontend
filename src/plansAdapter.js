@@ -1,6 +1,6 @@
 class PlansAdapter{
     constructor(){
-        this.baseUrl = "http://localhost:3000/plans"
+        this.baseUrl = "https://trip-itinerary-backend.herokuapp.com/plans"
     }
 
     sendPostRequest(plan){
